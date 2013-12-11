@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+
+    NSString *deviceURL;
+}
+
+
+- (IBAction)buttonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *value;
+@property (weak, nonatomic) IBOutlet UITextField *key;
+@property (weak, nonatomic) IBOutlet UITextField *deviceURL;
 
 @end

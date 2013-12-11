@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "AFHTTPClient.h"
+#import "AFHTTPRequestOperation.h"
 
 @interface ViewController ()
 
@@ -26,4 +28,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)buttonPressed:(id)sender {
+    
+    [self sendJSONWithKey:_key.text withValue:_value.text];
+}
+
+#pragma mark - POST
+
+- (void)sendJSONWithKey:(NSString *)key withValue:(NSString *) value{
+    
+        
+        AFHTTPClient *httpClient=[[AFHTTPClient alloc]initWithBaseURL:[NSURL URLWithString:_deviceURL.text]];
+        
+        [httpClient setParameterEncoding:AFJSONParameterEncoding];
+        
+        
+        NSMutableURLRequest *request=[httpClient requestWithMethod:@"GET"
+                                                              path:deviceURL
+                                                        parameters:@{key:value}];
+        NSLog(@"%@",request);
+        
+        AFHTTPRequestOperation *operation=[[AFHTTPRequestOperation alloc]initWithRequest:request];
+        
+        [httpClient registerHTTPOperationClass:[AFHTTPRequestOperation class]];
+        
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation,id responseObject){
+            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        }
+                                         failure:^(AFHTTPRequestOperation*operation,NSError*error){
+                                             //SVProgressHUD Es la alerta que sale
+                                             // [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+                                             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                         }];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+        [operation start];
+    
+    
+    
+}
 @end
