@@ -48,7 +48,8 @@
                                                               path:deviceURL
                                                         parameters:@{key:value}];
         NSLog(@"%@",request);
-        
+        _sentURL.text = [NSString stringWithFormat:@"%@",request];
+    
         AFHTTPRequestOperation *operation=[[AFHTTPRequestOperation alloc]initWithRequest:request];
         
         [httpClient registerHTTPOperationClass:[AFHTTPRequestOperation class]];
@@ -66,5 +67,10 @@
     
     
     
+}
+- (IBAction)hiddeKeyboard:(id)sender {
+    [ _sentURL resignFirstResponder];
+    [_key resignFirstResponder];
+    [_value resignFirstResponder];
 }
 @end

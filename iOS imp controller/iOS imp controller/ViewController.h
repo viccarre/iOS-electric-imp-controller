@@ -18,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *value;
 @property (weak, nonatomic) IBOutlet UITextField *key;
 @property (weak, nonatomic) IBOutlet UITextField *deviceURL;
+@property (weak, nonatomic) IBOutlet UILabel *sentURL;
+- (IBAction)hiddeKeyboard:(id)sender;
 
 @end
