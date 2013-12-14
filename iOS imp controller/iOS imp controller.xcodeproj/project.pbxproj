@@ -34,6 +34,7 @@
 		5B624CE41858FAA9009FBBB6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B624CE31858FAA9009FBBB6 /* SystemConfiguration.framework */; };
 		5B624CE61858FAB3009FBBB6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B624CE51858FAB3009FBBB6 /* QuartzCore.framework */; };
 		5B624CE81858FAC5009FBBB6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B624CE71858FAC5009FBBB6 /* MobileCoreServices.framework */; };
+		5B7F0882185C162E00357CCE /* imp connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B7F0881185C162E00357CCE /* imp connect.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		5B624CE31858FAA9009FBBB6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5B624CE51858FAB3009FBBB6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5B624CE71858FAC5009FBBB6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		5B7F0881185C162E00357CCE /* imp connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imp connect.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		5B624C941858DEEE009FBBB6 /* iOS imp controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B7F0881185C162E00357CCE /* imp connect.png */,
 				5B624C9D1858DEEE009FBBB6 /* AppDelegate.h */,
 				5B624C9E1858DEEE009FBBB6 /* AppDelegate.m */,
 				5B624CA01858DEEE009FBBB6 /* Main_iPhone.storyboard */,
@@ -300,6 +303,7 @@
 			files = (
 				5B624CA51858DEEE009FBBB6 /* Main_iPad.storyboard in Resources */,
 				5B624CAA1858DEEE009FBBB6 /* Images.xcassets in Resources */,
+				5B7F0882185C162E00357CCE /* imp connect.png in Resources */,
 				5B624CA21858DEEE009FBBB6 /* Main_iPhone.storyboard in Resources */,
 				5B624C991858DEEE009FBBB6 /* InfoPlist.strings in Resources */,
 			);
@@ -466,12 +470,12 @@
 		5B624CC11858DEEF009FBBB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS imp controller/iOS imp controller-Prefix.pch";
 				INFOPLIST_FILE = "iOS imp controller/iOS imp controller-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -479,12 +483,12 @@
 		5B624CC21858DEEF009FBBB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS imp controller/iOS imp controller-Prefix.pch";
 				INFOPLIST_FILE = "iOS imp controller/iOS imp controller-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -550,6 +554,7 @@
 				5B624CC21858DEEF009FBBB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B624CC31858DEEF009FBBB6 /* Build configuration list for PBXNativeTarget "iOS imp controllerTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +563,7 @@
 				5B624CC51858DEEF009FBBB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
